@@ -35,9 +35,9 @@ def get_transforms():
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 parser = argparse.ArgumentParser()
-parser.add_argument('--img_folder',type=str,default=r'D:\Desk\PycharmProject\lightweight-uie\incloud\myfive-k7-c7-23.8\myfive-org\datasets\dataset_jimei\test_data\input/',help='input image path')
-parser.add_argument('--load_modke_folder',type=str,default=r'D:\Desk\PycharmProject\lightweight-uie\incloud\myfive-k7-c7-23.8\myfive-org\results\model_save/',help='output folder')
-parser.add_argument('--output_folder',type=str,default=r'D:\Desk\PycharmProject\lightweight-uie\incloud\myfive-k7-c7-23.8\myfive-org\results\output_test-60/',help='output folder')
+parser.add_argument('--img_folder',type=str,default=r'\test_data\input/',help='input image path')
+parser.add_argument('--load_modke_folder',type=str,default=r'\results\model_save/',help='output folder')
+parser.add_argument('--output_folder',type=str,default=r'\results\output_test-60/',help='output folder')
 args = parser.parse_args()
 
 if __name__ == "__main__":
