@@ -9,16 +9,12 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 
 def get_transforms():
-    # transformes.Compose用来串联多个图片变换操作。
     transform = transforms.Compose([
         transforms.ToTensor(),  # H,W,C -> C,H,W && [0,255] -> [0,1]
         transforms.Resize([256, 256])
     ])
     return transform
 
-#首先，在初始化函数中调用get_imglist函数获取文件夹路径下的所有文件的列表。
-#然后，在Dataloader类实例化以后的对象调用时，就会用过[index]的方式使用__getitem__函数
-#获取文件路径，获取的个数根据batch_size来定。
 class MYDataSet(Dataset):
     def __init__(self, src_data_path, dst_data_path, train_flag):
 
